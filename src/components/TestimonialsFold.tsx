@@ -42,8 +42,8 @@ export const TestimonialsFold: React.FC<TestimonialsFoldProps> = ({ onOpenEmerge
   ];
 
   return (
-    <section id="blog" className="relative w-full bg-[#06080e] text-slate-100 py-16 sm:py-24 lg:py-28 border-t border-slate-800/80 font-['Poppins',sans-serif]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
+    <section id="depoimentos" className="relative w-full bg-[#06080e] text-slate-100 py-16 sm:py-24 lg:py-28 border-t border-slate-800/80 font-['Poppins',sans-serif]">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-12">
         
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 space-y-3.5">
@@ -111,10 +111,10 @@ export const TestimonialsFold: React.FC<TestimonialsFoldProps> = ({ onOpenEmerge
         </div>
 
         {/* Action Button */}
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center flex justify-center w-full">
           <button
             onClick={onOpenEmergencyModal}
-            className="silver-button px-8 py-3.5 rounded-lg text-xs font-bold uppercase tracking-widest inline-flex items-center space-x-2.5 shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer"
+            className="silver-button w-full sm:w-auto px-8 py-3.5 rounded-lg text-xs font-bold uppercase tracking-widest inline-flex items-center justify-center space-x-2.5 shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer"
           >
             <MessageCircle className="w-4 h-4 fill-current" />
             <span>FALAR COM A ADVOGADA AGORA</span>

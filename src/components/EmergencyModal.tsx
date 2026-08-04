@@ -17,7 +17,7 @@ export const EmergencyModal: React.FC<EmergencyModalProps> = ({ isOpen, onClose,
   if (!isOpen) return null;
 
   const encodedWhatsAppUrl = `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(
-    `URGENTE - ATENDIMENTO CRIMINAL 24H\n` +
+    `URGENTE - ATENDIMENTO CRIMINAL\n` +
     `Nome: ${personName || 'Não informado'}\n` +
     `Tipo de Ocorrência: ${urgencyType}\n` +
     `Cidade/DP: ${city || 'Não informada'}\n` +
@@ -43,7 +43,7 @@ export const EmergencyModal: React.FC<EmergencyModalProps> = ({ isOpen, onClose,
               <AlertTriangle className="w-5 h-5 text-slate-200" />
             </div>
             <div>
-              <h3 className="font-bold text-lg text-slate-100">Plantão Criminal 24 Horas</h3>
+              <h3 className="font-bold text-lg text-slate-100">Atendimento Criminal de Urgência</h3>
               <p className="text-xs text-slate-400 flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 Advogado criminalista disponível agora

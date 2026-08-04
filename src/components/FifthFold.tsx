@@ -21,8 +21,8 @@ export const FifthFold: React.FC<FifthFoldProps> = ({ onOpenEmergencyModal }) =>
       </div>
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 relative z-10">
-        <div className="max-w-xl lg:max-w-2xl space-y-7 sm:space-y-8 text-left">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-12 relative z-10">
+        <div className="max-w-xl lg:max-w-2xl space-y-7 sm:space-y-8 text-center lg:text-left bg-[#07090e]/90 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none p-6 sm:p-8 lg:p-0 rounded-2xl border border-slate-800/80 lg:border-none shadow-2xl lg:shadow-none flex flex-col items-center lg:items-start">
           
           {/* Main Title matching reference image */}
           <h2 className="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-amber-200/95 leading-[1.18]">
@@ -31,7 +31,7 @@ export const FifthFold: React.FC<FifthFoldProps> = ({ onOpenEmergencyModal }) =>
           </h2>
 
           {/* Callout 1 */}
-          <div className="space-y-2.5">
+          <div className="space-y-2.5 text-center lg:text-left">
             <h3 className="text-sm sm:text-base font-bold text-slate-100 tracking-wide">
               Não deixe sua liberdade nas mãos de qualquer um.
             </h3>
@@ -41,7 +41,7 @@ export const FifthFold: React.FC<FifthFoldProps> = ({ onOpenEmergencyModal }) =>
           </div>
 
           {/* Callout 2 */}
-          <div className="space-y-2.5">
+          <div className="space-y-2.5 text-center lg:text-left">
             <h3 className="text-sm sm:text-base font-bold text-slate-100 tracking-wide">
               Não perca tempo!
             </h3>
@@ -51,13 +51,13 @@ export const FifthFold: React.FC<FifthFoldProps> = ({ onOpenEmergencyModal }) =>
           </div>
 
           {/* Golden CTA Button matching reference image */}
-          <div className="pt-2">
+          <div className="pt-2 w-full sm:w-auto flex justify-center lg:justify-start">
             <button
               onClick={onOpenEmergencyModal}
-              className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold px-8 py-4 rounded-lg text-xs sm:text-sm tracking-wider uppercase shadow-2xl hover:shadow-amber-500/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 flex items-center space-x-2.5 cursor-pointer"
+              className="w-full sm:w-auto bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold px-8 py-4 rounded-lg text-xs sm:text-sm tracking-wider uppercase shadow-2xl hover:shadow-amber-500/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 flex items-center justify-center space-x-2.5 cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 fill-current text-slate-950" />
-              <span>Quero contratar</span>
+              <span>Quero contratar a melhor defesa</span>
             </button>
           </div>
 

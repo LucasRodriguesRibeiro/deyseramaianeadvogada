@@ -41,13 +41,13 @@ export const FourthFold: React.FC<FourthFoldProps> = ({ onOpenEmergencyModal }) 
       icon: UserCheck,
       title: 'ATUAÇÃO EM DELEGACIAS',
       description:
-        'Disponíveis 24 horas por dia, estamos prontos para agir em casos de prisões em flagrante, conduzindo investigações defensivas que coletam provas favoráveis ao acusado. Não importa a hora, estamos aqui para proteger seus direitos.',
+        'Estamos prontos para agir em casos de prisões em flagrante, conduzindo investigações defensivas que coletam provas favoráveis ao acusado e garantem a proteção dos seus direitos.',
     },
   ];
 
   return (
     <section id="servicos" className="relative w-full bg-[#06080e] text-slate-100 py-16 sm:py-24 lg:py-28 border-t border-slate-800/80 font-['Poppins',sans-serif]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-12">
         
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
@@ -90,12 +90,12 @@ export const FourthFold: React.FC<FourthFoldProps> = ({ onOpenEmergencyModal }) 
         </div>
 
         {/* Bottom CTA Button */}
-        <div className="mt-12 sm:mt-16 flex justify-center">
+        <div className="mt-12 sm:mt-16 flex justify-center w-full">
           <button
             onClick={onOpenEmergencyModal}
-            className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold px-9 py-4 rounded-xl text-xs sm:text-sm tracking-widest uppercase shadow-xl hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300 transform hover:scale-[1.03] active:scale-95 cursor-pointer"
+            className="w-full sm:w-auto bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold px-9 py-4 rounded-xl text-xs sm:text-sm tracking-widest uppercase shadow-xl hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300 transform hover:scale-[1.03] active:scale-95 cursor-pointer flex items-center justify-center space-x-2"
           >
-            Quero contratar
+            <span>Quero contratar a melhor defesa</span>
           </button>
         </div>
 
