@@ -36,8 +36,8 @@ export const ThirdFold: React.FC<ThirdFoldProps> = ({ onOpenEmergencyModal }) =>
     <section className="relative w-full bg-gradient-to-b from-[#0a0c10] via-[#121620] to-[#07080b] text-slate-100 py-16 sm:py-24 lg:py-28 border-t border-slate-800/80 overflow-hidden font-['Poppins',sans-serif]">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
-        {/* Left Column: Hourglass Asset */}
-        <div className="lg:col-span-5 flex justify-center lg:justify-end">
+        {/* Left Column: Hourglass Asset (ordered 2nd on mobile, 1st on desktop) */}
+        <div className="order-2 lg:order-1 lg:col-span-5 flex justify-center lg:justify-end">
           <div className="relative w-56 sm:w-80 aspect-[3/4] flex items-center justify-center">
             <div className="absolute inset-0 bg-amber-500/10 rounded-full filter blur-3xl"></div>
             <img
@@ -48,8 +48,8 @@ export const ThirdFold: React.FC<ThirdFoldProps> = ({ onOpenEmergencyModal }) =>
           </div>
         </div>
 
-        {/* Right Column: Countdown + Message + CTA */}
-        <div className="lg:col-span-7 space-y-7 sm:space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start">
+        {/* Right Column: Countdown + Message + CTA (ordered 1st on mobile, 2nd on desktop) */}
+        <div className="order-1 lg:order-2 lg:col-span-7 space-y-7 sm:space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start">
           
           {/* Countdown Boxes */}
           <div className="flex items-center justify-center lg:justify-start space-x-2.5 sm:space-x-5 w-full">
