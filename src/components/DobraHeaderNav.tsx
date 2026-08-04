@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MessageCircle, Menu, X } from 'lucide-react';
+import logoImg from '../assets/images/logoadvogada.png';
 
 interface DobraHeaderNavProps {
   onOpenEmergencyModal: () => void;
@@ -25,7 +26,7 @@ export const DobraHeaderNav: React.FC<DobraHeaderNavProps> = ({
         {/* Brand Logo Image */}
         <a href="#" className="flex items-center group shrink-0 py-0.5">
           <img
-            src="/src/assets/images/logoadvogada.png"
+            src={logoImg}
             alt="Deyse Ramaiane Advocacia Criminal Logo"
             className="h-9 sm:h-11 lg:h-12 w-auto max-w-[180px] sm:max-w-[240px] object-contain brightness-110 drop-shadow-md group-hover:scale-[1.02] transition-transform"
           />

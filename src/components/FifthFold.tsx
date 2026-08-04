@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import advDeiseImg from '../assets/images/advdeise-ramaiane.jfif';
 
 interface FifthFoldProps {
   onOpenEmergencyModal: () => void;
@@ -11,7 +12,7 @@ export const FifthFold: React.FC<FifthFoldProps> = ({ onOpenEmergencyModal }) =>
       {/* Background Lawyer Office Image on the Right */}
       <div className="absolute top-0 right-0 bottom-0 w-full lg:w-[52%] pointer-events-none z-0">
         <img
-          src="/src/assets/images/advdeise-ramaiane.jfif"
+          src={advDeiseImg}
           alt="Deyse Ramaiane Advocacia Criminal"
           className="w-full h-full object-cover object-[center_20%] grayscale contrast-125 brightness-90 opacity-35 lg:opacity-95"
         />

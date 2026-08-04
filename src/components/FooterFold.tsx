@@ -6,6 +6,7 @@ import {
   Mail,
   ArrowUp,
 } from 'lucide-react';
+import logoImg from '../assets/images/logoadvogada.png';
 
 interface FooterFoldProps {
   onOpenEmergencyModal: () => void;
@@ -51,7 +52,7 @@ export const FooterFold: React.FC<FooterFoldProps> = ({ onOpenEmergencyModal }) 
         <div className="space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
           <a href="#" className="flex items-center justify-center md:justify-start group">
             <img
-              src="/src/assets/images/logoadvogada.png"
+              src={logoImg}
               alt="Deyse Ramaiane Advocacia Criminal Logo"
               className="h-12 sm:h-16 w-auto max-w-[240px] object-contain brightness-110 drop-shadow-md group-hover:scale-[1.02] transition-transform"
             />

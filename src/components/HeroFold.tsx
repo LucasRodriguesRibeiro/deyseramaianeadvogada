@@ -11,6 +11,7 @@ import {
   ClipboardCheck,
   Search,
 } from 'lucide-react';
+import deiseImg from '../assets/images/deise-ramaiane.jfif';
 
 interface HeroFoldProps {
   onOpenEmergencyModal: () => void;
@@ -65,7 +66,7 @@ export const HeroFold: React.FC<HeroFoldProps> = ({ onOpenEmergencyModal }) => {
         {/* Right Background Lawyer Photo (Ajustado o enquadramento do rosto para ficar visível) */}
         <div className="absolute top-0 right-0 bottom-0 w-full lg:w-[52%] pointer-events-none z-0 overflow-hidden">
           <img
-            src="/src/assets/images/deise-ramaiane.jfif"
+            src={deiseImg}
             alt="Deyse Ramaiane - Advocacia Criminal"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center lg:object-[60%_45%] grayscale contrast-110 brightness-95 opacity-50 lg:opacity-90"

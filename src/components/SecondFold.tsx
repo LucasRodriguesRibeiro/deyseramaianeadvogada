@@ -1,4 +1,5 @@
 import React from 'react';
+import handcuffsImg from '../assets/images/prison_handcuffs_bg_1785764557592.jpg';
 
 export const SecondFold: React.FC = () => {
   return (
@@ -41,7 +42,7 @@ export const SecondFold: React.FC = () => {
         <div className="lg:col-span-6 flex justify-center lg:justify-end w-full">
           <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-2xl overflow-hidden border border-slate-800/90 shadow-2xl group">
             <img
-              src="/src/assets/images/prison_handcuffs_bg_1785764557592.jpg"
+              src={handcuffsImg}
               alt="Mãos algemadas em grades de prisão"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover object-center filter brightness-90 contrast-110 group-hover:scale-105 transition-transform duration-700"
