@@ -20,15 +20,15 @@ export const DobraHeaderNav: React.FC<DobraHeaderNavProps> = ({
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#0B0B0C]/95 backdrop-blur-md border-b border-[#18191B] py-2 transition-all duration-300 font-sans-clean">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[56px]">
+    <header className="sticky top-0 z-50 w-full bg-[#0B0B0C]/95 backdrop-blur-md border-b border-[#18191B] py-2.5 sm:py-3 transition-all duration-300 font-sans-clean">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[64px]">
         
         {/* Brand Logo Image */}
-        <a href="#" className="flex items-center group shrink-0 py-0.5">
+        <a href="#" className="flex items-center group shrink-0 py-1">
           <img
             src={logoImg}
             alt="Deyse Ramaiane Advocacia Criminal"
-            className="h-9 sm:h-11 w-auto max-w-[180px] sm:max-w-[220px] object-contain brightness-110 group-hover:opacity-90 transition-opacity"
+            className="h-12 sm:h-16 lg:h-20 w-auto max-w-[260px] sm:max-w-[340px] lg:max-w-[420px] object-contain brightness-110 group-hover:opacity-90 transition-opacity"
           />
         </a>
 
