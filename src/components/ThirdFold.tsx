@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShieldAlert, AlertCircle, PhoneCall } from 'lucide-react';
+import prisonBg from '../assets/images/prison_handcuffs_bg_1785764557592.jpg';
 
 interface ThirdFoldProps {
   onOpenEmergencyModal: () => void;
@@ -16,8 +17,18 @@ export const ThirdFold: React.FC<ThirdFoldProps> = ({ onOpenEmergencyModal }) =>
   ];
 
   return (
-    <section id="urgencias" className="relative w-full bg-[#18191B] text-[#F7F7F5] py-20 sm:py-28 font-sans-clean border-t border-[#74777C]/20">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 space-y-12">
+    <section id="urgencias" className="relative w-full bg-[#18191B] text-[#F7F7F5] py-20 sm:py-28 font-sans-clean border-t border-[#74777C]/20 overflow-hidden">
+      {/* Dark Dramatic Background Image */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
+        <img
+          src={prisonBg}
+          alt="Situações de Urgência Criminal"
+          className="w-full h-full object-cover object-center filter contrast-125 grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#18191B] via-[#18191B]/80 to-[#18191B]"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 space-y-12 relative z-10">
         
         {/* Section Header */}
         <div className="space-y-4 text-left max-w-3xl">

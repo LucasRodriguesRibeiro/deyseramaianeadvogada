@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
+import hourglassBg from '../assets/images/hourglass_silver_dark_1785765462160.jpg';
 
 interface PracticeAreasFoldProps {
   onOpenEmergencyModal: () => void;
@@ -12,6 +13,14 @@ export const PracticeAreasFold: React.FC<PracticeAreasFoldProps> = ({ onOpenEmer
     {
       title: "DIREITO PENAL E PROCESSO PENAL",
       desc: "Defesa técnica e estratégica em investigações e processos criminais."
+    },
+    {
+      title: "DIREITO PENAL EMPRESARIAL E COMPLIANCE CRIMINAL",
+      desc: "Defesa de empresários, gestores, sócios e executivos em investigações e processos por crimes empresariais, econômicos, tributários, lavagem de dinheiro, fraudes e crimes contra a Administração Pública, desde a fase investigativa até as instâncias superiores."
+    },
+    {
+      title: "DIREITO PENAL AMBIENTAL",
+      desc: "Atuação estratégica na defesa de pessoas físicas, empresários, produtores rurais, gestores e empresas em investigações e processos penais envolvendo fauna, flora, desmatamento, queimadas, recursos naturais, mineração, poluição e licenciamento ambiental."
     },
     {
       title: "TRÁFICO DE DROGAS",
@@ -30,16 +39,16 @@ export const PracticeAreasFold: React.FC<PracticeAreasFoldProps> = ({ onOpenEmer
       desc: "Atuação jurídica em crimes praticados no ambiente digital e investigações envolvendo tecnologia."
     },
     {
-      title: "DIREITO PENAL EMPRESARIAL E COMPLIANCE CRIMINAL",
-      desc: "Defesa estratégica de empresários, sócios, administradores, executivos e empresas em investigações e processos por crimes empresariais, econômicos, tributários, lavagem de dinheiro, fraudes e crimes contra a Administração Pública, desde a fase investigativa até as instâncias superiores."
-    },
-    {
       title: "MÉDICOS E CLÍNICAS",
-      desc: "Defesa criminal estratégica de profissionais da saúde, clínicas e instituições."
+      desc: "Defesa criminal estratégica de profissionais da saúde, clínicas e instituições diante de questionamentos sobre a conduta profissional."
     },
     {
       title: "FRAUDES BANCÁRIAS",
       desc: "Atuação em situações envolvendo fraudes financeiras e medidas voltadas à recuperação de prejuízos."
+    },
+    {
+      title: "DEFESA CRIMINAL DE ESTRANGEIROS",
+      desc: "Assistência jurídica a estrangeiros investigados, presos ou acusados de crimes no Brasil, com atuação desde a delegacia e audiência de custódia até o processo criminal e a execução penal."
     },
     {
       title: "INVESTIGAÇÕES CRIMINAIS",
@@ -50,8 +59,19 @@ export const PracticeAreasFold: React.FC<PracticeAreasFoldProps> = ({ onOpenEmer
   const displayedAreas = showAll ? practiceAreas : practiceAreas.slice(0, 3);
 
   return (
-    <section id="areas-de-atuacao" className="relative w-full bg-[#0B0B0C] text-[#F7F7F5] py-20 sm:py-28 font-sans-clean border-t border-[#18191B]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 space-y-12">
+    <section id="areas-de-atuacao" className="relative w-full bg-[#0B0B0C] text-[#F7F7F5] py-20 sm:py-28 font-sans-clean border-t border-[#18191B] overflow-hidden">
+      {/* Background Metallic Hourglass Image */}
+      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full z-0 opacity-15 pointer-events-none">
+        <img
+          src={hourglassBg}
+          alt="Ampulheta Prata - Justiça Criminal"
+          className="w-full h-full object-cover object-right filter contrast-125"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B0B0C] via-[#0B0B0C]/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B0B0C] via-transparent to-[#0B0B0C]"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 space-y-12 relative z-10">
         
         {/* Section Title */}
         <div className="space-y-3 text-left">

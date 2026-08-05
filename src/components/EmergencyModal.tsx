@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, PhoneCall, MessageCircle, Shield, AlertTriangle, CheckCircle2, Clock } from 'lucide-react';
 import { EmergencyContact } from '../types';
+import dobra2Img from '../assets/images/dobra2.jfif';
 
 interface EmergencyModalProps {
   isOpen: boolean;
@@ -38,15 +39,19 @@ export const EmergencyModal: React.FC<EmergencyModalProps> = ({ isOpen, onClose,
       >
         {/* Header Bar */}
         <div className="flex items-center justify-between p-5 border-b border-slate-800 bg-gradient-to-r from-[#121622] to-[#090c12]">
-          <div className="flex items-center space-x-3">
-            <div className="p-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200">
-              <AlertTriangle className="w-5 h-5 text-slate-200" />
+          <div className="flex items-center space-x-3.5">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-slate-400/60 shrink-0 shadow-md">
+              <img
+                src={dobra2Img}
+                alt="Dra. Deyse Ramaiane"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
             <div>
-              <h3 className="font-bold text-lg text-slate-100">Atendimento Criminal de Urgência</h3>
-              <p className="text-xs text-slate-400 flex items-center gap-1.5">
+              <h3 className="font-bold text-base sm:text-lg text-slate-100 leading-tight">Dra. Deyse Ramaiane</h3>
+              <p className="text-xs text-slate-300 flex items-center gap-1.5 pt-0.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                Advogado criminalista disponível agora
+                Atendimento Criminal de Urgência
               </p>
             </div>
           </div>

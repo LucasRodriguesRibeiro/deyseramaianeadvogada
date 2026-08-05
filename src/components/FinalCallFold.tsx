@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, PhoneCall } from 'lucide-react';
+import officeBg from '../assets/images/lawyer_office_bg_1785798115042.jpg';
 
 interface FinalCallFoldProps {
   onOpenEmergencyModal: () => void;
@@ -7,8 +8,18 @@ interface FinalCallFoldProps {
 
 export const FinalCallFold: React.FC<FinalCallFoldProps> = ({ onOpenEmergencyModal }) => {
   return (
-    <section className="relative w-full bg-[#0B0B0C] text-[#F7F7F5] py-24 sm:py-32 font-sans-clean border-t border-[#18191B]">
-      <div className="max-w-5xl mx-auto px-6 sm:px-10 text-center space-y-8">
+    <section className="relative w-full bg-[#0B0B0C] text-[#F7F7F5] py-24 sm:py-32 font-sans-clean border-t border-[#18191B] overflow-hidden">
+      {/* Subtle Background Image with Gradient Mask */}
+      <div className="absolute inset-0 z-0 opacity-25 pointer-events-none">
+        <img
+          src={officeBg}
+          alt="Escritório de Advocacia Criminal"
+          className="w-full h-full object-cover filter contrast-110 brightness-75"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0C] via-[#0B0B0C]/80 to-[#0B0B0C]"></div>
+      </div>
+
+      <div className="max-w-5xl mx-auto px-6 sm:px-10 text-center space-y-8 relative z-10">
         
         {/* Subtle Category */}
         <div className="inline-flex items-center space-x-3 text-xs tracking-[0.25em] text-[#B8BBC0] uppercase font-semibold justify-center">

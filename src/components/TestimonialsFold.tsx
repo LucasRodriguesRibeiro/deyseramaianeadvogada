@@ -45,14 +45,14 @@ export const TestimonialsFold: React.FC<TestimonialsFoldProps> = ({ onOpenEmerge
         <div className="space-y-3 text-left max-w-3xl">
           <div className="inline-flex items-center space-x-3 text-xs tracking-[0.25em] text-[#B8BBC0] uppercase font-semibold">
             <span className="w-8 h-[1px] bg-[#B8BBC0]"></span>
-            <span>AVALIAÇÕES & DEPOIMENTOS</span>
+            <span>DEPOIMENTOS</span>
           </div>
 
-          <h2 className="font-serif-title text-3xl sm:text-4xl lg:text-[2.75rem] font-normal text-[#F7F7F5] tracking-tight">
-            RECONHECIMENTO E RESULTADOS
+          <h2 className="font-serif-title text-3xl sm:text-4xl lg:text-[2.75rem] font-normal text-[#F7F7F5] tracking-tight uppercase">
+            DEPOIMENTOS
           </h2>
-          <p className="text-[#B8BBC0] text-sm sm:text-base font-light">
-            Relatos de clientes respaldados pela atuação ética e técnica da advocacia criminal estratégica.
+          <p className="text-[#B8BBC0] text-base sm:text-lg font-light">
+            Experiências de quem confiou em nosso trabalho.
           </p>
         </div>
 

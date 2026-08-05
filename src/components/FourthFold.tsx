@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import officePhoto from '../assets/images/lawyer_office_bg_1785798115042.jpg';
+import drugLawBg from '../assets/images/drug_law_defense_bg.png';
 
 interface FourthFoldProps {
   onOpenEmergencyModal: () => void;
@@ -66,15 +66,11 @@ export const FourthFold: React.FC<FourthFoldProps> = ({ onOpenEmergencyModal }) 
 
         {/* Right Column: Full Color Photo Card */}
         <div className="lg:col-span-5 flex justify-center">
-          <div className="relative w-full max-w-md aspect-[4/3] sm:aspect-[14/10] rounded-lg overflow-hidden border border-[#B8BBC0]/50 shadow-xl">
+          <div className="relative w-full max-w-md aspect-[4/3] sm:aspect-[14/10] rounded-lg overflow-hidden border border-[#B8BBC0]/50 shadow-xl group">
             <img
-              src="/images/lawyer_office_bg_1785798115042.jpg"
-              alt="Escritório de Advocacia Criminal"
-              referrerPolicy="no-referrer"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = officePhoto;
-              }}
-              className="w-full h-full object-cover contrast-105 brightness-100"
+              src={drugLawBg}
+              alt="Atuação Especializada em Tráfico de Drogas e Lei de Drogas"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 contrast-105 brightness-95"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0C]/40 via-transparent to-transparent"></div>
           </div>

@@ -48,7 +48,7 @@ export const HowItWorksFold: React.FC<HowItWorksFoldProps> = ({ onOpenEmergencyM
             COMO FUNCIONA O ATENDIMENTO
           </h2>
           <p className="text-[#74777C] text-sm sm:text-base font-light">
-            Metodologia transparente e estruturada para garantir a melhor condução do seu caso.
+            Metodologia transparente, ética e estruturada para garantir a melhor condução e proteção dos seus direitos em todas as fases do processo.
           </p>
         </div>
 

@@ -17,7 +17,6 @@ export const DobraHeaderNav: React.FC<DobraHeaderNavProps> = ({
     { label: 'SOBRE', href: '#apresentacao' },
     { label: 'ÁREAS DE ATUAÇÃO', href: '#areas-de-atuacao' },
     { label: 'ATUAÇÃO ESPECIALIZADA', href: '#especialidades' },
-    { label: 'CONTEÚDO', href: '#conteudo-e-autoridade' },
   ];
 
   return (
@@ -27,11 +26,8 @@ export const DobraHeaderNav: React.FC<DobraHeaderNavProps> = ({
         {/* Brand Logo Image */}
         <a href="#" className="flex items-center group shrink-0 py-0.5">
           <img
-            src="/images/logoadvogada.png"
+            src={logoImg}
             alt="Deyse Ramaiane Advocacia Criminal"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = logoImg;
-            }}
             className="h-9 sm:h-11 w-auto max-w-[180px] sm:max-w-[220px] object-contain brightness-110 group-hover:opacity-90 transition-opacity"
           />
         </a>

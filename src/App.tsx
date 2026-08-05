@@ -3,11 +3,9 @@ import { DobraHeaderNav } from './components/DobraHeaderNav';
 import { HeroFold } from './components/HeroFold';
 import { SecondFold } from './components/SecondFold';
 import { PracticeAreasFold } from './components/PracticeAreasFold';
-import { ThirdFold } from './components/ThirdFold';
 import { FourthFold } from './components/FourthFold';
 import { FifthFold } from './components/FifthFold';
 import { HowItWorksFold } from './components/HowItWorksFold';
-import { EditorialContentFold } from './components/EditorialContentFold';
 import { FinalCallFold } from './components/FinalCallFold';
 import { TestimonialsFold } from './components/TestimonialsFold';
 import { FooterFold } from './components/FooterFold';
@@ -44,9 +42,6 @@ export default function App() {
         {/* 2. Áreas de Atuação */}
         <PracticeAreasFold onOpenEmergencyModal={handleOpenModal} />
 
-        {/* 3. Situações que Exigem Atuação Imediata */}
-        <ThirdFold onOpenEmergencyModal={handleOpenModal} />
-
         {/* 4. Destaque - Tráfico de Drogas */}
         <FourthFold onOpenEmergencyModal={handleOpenModal} />
 
@@ -55,9 +50,6 @@ export default function App() {
 
         {/* 6. Como Funciona o Atendimento */}
         <HowItWorksFold onOpenEmergencyModal={handleOpenModal} />
-
-        {/* 7. Conteúdo e Autoridade */}
-        <EditorialContentFold onOpenEmergencyModal={handleOpenModal} />
 
         {/* 8. Chamada Final */}
         <FinalCallFold onOpenEmergencyModal={handleOpenModal} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
-import advDeiseImg from '../assets/images/advdeise-ramaiane.jpg';
+import dobra1Img from '../assets/images/dobra1.jfif';
 
 interface HeroFoldProps {
   onOpenEmergencyModal: () => void;
@@ -13,12 +13,8 @@ export const HeroFold: React.FC<HeroFoldProps> = ({ onOpenEmergencyModal }) => {
       {/* Right Background Lawyer Photo in FULL VIVID COLOR - Bright and Clear */}
       <div className="absolute top-0 right-0 bottom-0 w-full lg:w-[60%] pointer-events-none z-0 overflow-hidden">
         <img
-          src="/images/advdeise-ramaiane.jpg"
+          src={dobra1Img}
           alt="Dra. Deyse Ramaiane - Advocacia Criminal"
-          referrerPolicy="no-referrer"
-          onError={(e) => {
-            (e.target as HTMLImageElement).src = advDeiseImg;
-          }}
           className="w-full h-full object-cover object-[70%_20%] lg:object-[62%_25%] contrast-105 brightness-105 opacity-90 lg:opacity-100"
         />
         {/* Soft, subtle edge gradient transition so text is readable while photo remains fully bright and clear */}
