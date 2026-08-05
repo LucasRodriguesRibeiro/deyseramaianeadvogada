@@ -1,54 +1,85 @@
 import React from 'react';
-import handcuffsImg from '../assets/images/prison_handcuffs_bg_1785764557592.jpg';
+import deiseImg from '../assets/images/deise-ramaiane.jpg';
+import advDeiseImg from '../assets/images/advdeise-ramaiane.jpg';
+import { Award, Globe, UserCheck } from 'lucide-react';
 
 export const SecondFold: React.FC = () => {
   return (
-    <section id="sobre" className="relative w-full bg-[#07080b] text-slate-100 py-16 sm:py-24 lg:py-28 border-t border-slate-800/80 overflow-hidden font-['Poppins',sans-serif]">
-      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <section id="sobre" className="relative w-full bg-[#F7F7F5] text-[#0B0B0C] py-20 sm:py-28 font-sans-clean overflow-hidden">
+      <div id="apresentacao" className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
-        {/* Left Column: Text Content strictly matching the image text */}
-        <div className="lg:col-span-6 space-y-6 sm:space-y-7 text-center lg:text-left flex flex-col items-center lg:items-start">
+        {/* Left Column: Professional Portrait of Dra. Deyse in FULL COLOR */}
+        <div className="lg:col-span-5 flex justify-center">
+          <div className="relative w-full max-w-md aspect-[4/5] rounded-lg overflow-hidden border border-[#B8BBC0]/60 shadow-2xl">
+            <img
+              src="/images/deise-ramaiane.jpg"
+              alt="Dra. Deyse Ramaiane - Advocacia Criminal"
+              referrerPolicy="no-referrer"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = deiseImg;
+              }}
+              className="w-full h-full object-cover object-top contrast-105 brightness-100"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0C]/30 via-transparent to-transparent"></div>
+          </div>
+        </div>
+
+        {/* Right Column: Text Content */}
+        <div className="lg:col-span-7 space-y-7 text-left">
           
-          {/* Main Title */}
-          <h2 className="font-serif-title text-3xl sm:text-4xl lg:text-[2.6rem] font-bold leading-tight tracking-tight text-white">
-            Qual o prazo para defesa em <span className="silver-text-gradient">caso de prisão?</span>
-          </h2>
+          <div className="space-y-3">
+            <div className="inline-flex items-center space-x-3 text-xs tracking-[0.25em] text-[#74777C] uppercase font-semibold">
+              <span className="w-8 h-[1px] bg-[#74777C]"></span>
+              <span>APRESENTAÇÃO PROFISSIONAL</span>
+            </div>
 
-          <div className="space-y-4 text-slate-200 text-sm sm:text-base leading-relaxed font-normal w-full">
-            <p className="font-semibold text-slate-100 text-base sm:text-lg">
-              Se alguém foi preso em flagrante, cada minuto conta.
+            <h2 className="font-serif-title text-3xl sm:text-4xl lg:text-[2.75rem] font-normal leading-tight text-[#0B0B0C] tracking-tight">
+              MAIS DE UMA DÉCADA DEDICADA À ADVOCACIA.
+            </h2>
+          </div>
+
+          <div className="space-y-4 text-[#18191B] text-base leading-relaxed font-light">
+            <p>
+              Deyse Ramaiane atua na advocacia criminal com formação especializada em Direito Penal, Processo Penal e Execução Penal, desenvolvendo uma atuação pautada em análise técnica, estratégia e acompanhamento individualizado de cada caso.
             </p>
+            <p>
+              Sua atuação abrange desde situações urgentes e investigações criminais até processos de maior complexidade, com atendimento em âmbito nacional.
+            </p>
+          </div>
 
-            {/* Highlighted Custody Hearing Callout Card */}
-            <div className="bg-[#0e121c]/90 border border-slate-800/90 rounded-xl p-4 sm:p-5 text-center lg:text-left space-y-2 shadow-lg">
-              <p className="text-slate-200 text-xs sm:text-sm">
-                <strong className="text-amber-300 font-bold uppercase tracking-wider block mb-1">⚖️ Audiência de Custódia:</strong>
-                <strong className="text-white font-semibold">No prazo legal</strong> após a prisão, o acusado deve passar por uma audiência de custódia, onde o juiz decidirá se a prisão será mantida ou não.
+          {/* Key Highlights Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-[#B8BBC0]/40">
+            <div className="bg-[#18191B] text-[#F7F7F5] p-4.5 rounded-md space-y-1.5 shadow-sm">
+              <Award className="w-5 h-5 text-[#B8BBC0]" />
+              <div className="text-xs font-semibold tracking-wider uppercase leading-snug">
+                Mais de uma década
+              </div>
+              <p className="text-[11px] text-[#B8BBC0] font-light">
+                Dedicada à advocacia criminal
               </p>
             </div>
 
-            <p className="text-slate-200">
-              Esse é o momento crítico em que uma defesa bem articulada <strong className="text-white font-semibold">pode fazer toda a diferença.</strong>
-            </p>
+            <div className="bg-[#18191B] text-[#F7F7F5] p-4.5 rounded-md space-y-1.5 shadow-sm">
+              <Globe className="w-5 h-5 text-[#B8BBC0]" />
+              <div className="text-xs font-semibold tracking-wider uppercase leading-snug">
+                Atuação Nacional
+              </div>
+              <p className="text-[11px] text-[#B8BBC0] font-light">
+                Assistência jurídica estratégica
+              </p>
+            </div>
 
-            <p className="text-slate-300 text-xs sm:text-sm font-light">
-              Além disso, em casos de prisão temporária ou preventiva, cada segundo que o acusado passa sem uma defesa qualificada pode significar uma tragédia.
-            </p>
+            <div className="bg-[#18191B] text-[#F7F7F5] p-4.5 rounded-md space-y-1.5 shadow-sm">
+              <UserCheck className="w-5 h-5 text-[#B8BBC0]" />
+              <div className="text-xs font-semibold tracking-wider uppercase leading-snug">
+                Atendimento Personalizado
+              </div>
+              <p className="text-[11px] text-[#B8BBC0] font-light">
+                Acompanhamento direto
+              </p>
+            </div>
           </div>
 
-        </div>
-
-        {/* Right Column: Prison Handcuffs Image */}
-        <div className="lg:col-span-6 flex justify-center lg:justify-end w-full">
-          <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-2xl overflow-hidden border border-slate-800/90 shadow-2xl group">
-            <img
-              src={handcuffsImg}
-              alt="Mãos algemadas em grades de prisão"
-              referrerPolicy="no-referrer"
-              className="w-full h-full object-cover object-center filter brightness-90 contrast-110 group-hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#07080b] via-transparent to-transparent opacity-60"></div>
-          </div>
         </div>
 
       </div>

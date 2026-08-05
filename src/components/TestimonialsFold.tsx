@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, ShieldCheck, Quote, MessageCircle } from 'lucide-react';
+import { ShieldCheck, Quote } from 'lucide-react';
 
 interface TestimonialsFoldProps {
   onOpenEmergencyModal: () => void;
@@ -10,115 +10,83 @@ export const TestimonialsFold: React.FC<TestimonialsFoldProps> = ({ onOpenEmerge
     {
       name: 'M. S.',
       role: 'Atendimento Prisão em Flagrante',
-      rating: 5,
-      date: 'Há 2 semanas',
+      date: 'Atendimento presencial',
       comment:
         'A Dra. Deyse agiu com extrema rapidez na audiência de custódia do meu irmão. Conseguiu a liberdade provisória no mesmo dia com uma fundamentação impecável. Eterna gratidão!',
     },
     {
       name: 'R. A. F.',
       role: 'Defesa em Inquérito Policial',
-      rating: 5,
-      date: 'Há 1 mês',
+      date: 'Investigação criminal',
       comment:
         'Excelente profissional! Manteve a família informada a todo momento com total transparência e discrição. Conseguiu o arquivamento do inquérito antes de qualquer denúncia.',
     },
     {
       name: 'L. C. V.',
       role: 'Processo Lei de Drogas',
-      rating: 5,
-      date: 'Há 2 meses',
+      date: 'Ação Penal',
       comment:
         'A melhor advogada criminalista. Tinha um caso extremamente delicado envolvendo a Lei de Drogas, e a Dra. Deyse elaborou uma tese técnica impecável que levou à absolvição.',
     },
     {
       name: 'A. P. M.',
       role: 'Habeas Corpus / Liberdade',
-      rating: 5,
-      date: 'Há 3 meses',
+      date: 'Medida urgente',
       comment:
-        'Atendimento humanizado e resposta imediata às 3h da manhã. O Habeas Corpus impetrado por ela foi concedido no Tribunal. Transmite segurança e domínio total da matéria.',
+        'Atendimento humanizado e resposta imediata. O Habeas Corpus impetrado por ela foi concedido no Tribunal. Transmite segurança e domínio total da matéria.',
     },
   ];
 
   return (
-    <section id="depoimentos" className="relative w-full bg-[#06080e] text-slate-100 py-16 sm:py-24 lg:py-28 border-t border-slate-800/80 font-['Poppins',sans-serif]">
-      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-12">
+    <section id="depoimentos" className="relative w-full bg-[#18191B] text-[#F7F7F5] py-20 sm:py-28 font-sans-clean border-t border-[#74777C]/20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 space-y-12">
         
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 space-y-3.5">
-          <div className="flex items-center justify-center space-x-3 text-xs tracking-[0.25em] font-light text-slate-400 uppercase">
-            <span className="w-12 h-[1px] bg-slate-600"></span>
-            <span className="font-serif-title text-xl sm:text-2xl text-slate-200 tracking-widest">
-              AVALIAÇÕES E DEPOIMENTOS
-            </span>
-            <span className="w-12 h-[1px] bg-slate-600"></span>
+        <div className="space-y-3 text-left max-w-3xl">
+          <div className="inline-flex items-center space-x-3 text-xs tracking-[0.25em] text-[#B8BBC0] uppercase font-semibold">
+            <span className="w-8 h-[1px] bg-[#B8BBC0]"></span>
+            <span>AVALIAÇÕES & DEPOIMENTOS</span>
           </div>
 
-          <h2 className="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-slate-100">
-            O que nossos clientes dizem
+          <h2 className="font-serif-title text-3xl sm:text-4xl lg:text-[2.75rem] font-normal text-[#F7F7F5] tracking-tight">
+            RECONHECIMENTO E RESULTADOS
           </h2>
-
-          {/* Rating Summary Badge */}
-          <div className="inline-flex items-center space-x-2.5 bg-[#0c0f18] border border-slate-800/90 px-4 py-2 rounded-full mt-2 shadow-md">
-            <div className="flex text-amber-400">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-current" />
-              ))}
-            </div>
-            <span className="text-xs font-semibold text-slate-200">5.0 de 5.0</span>
-            <span className="text-xs text-slate-400">| Avaliações verificadas</span>
-          </div>
+          <p className="text-[#B8BBC0] text-sm sm:text-base font-light">
+            Relatos de clientes respaldados pela atuação ética e técnica da advocacia criminal estratégica.
+          </p>
         </div>
 
-        {/* Testimonial Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Minimalist Graphite Testimonial Cards (No Gold Stars) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {testimonials.map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#0b0e16]/90 border border-slate-800/90 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-slate-500 transition-all duration-300 hover:bg-[#101420] shadow-xl group min-h-[260px]"
+              className="bg-[#0B0B0C] border border-[#74777C]/25 rounded-md p-6 flex flex-col justify-between hover:border-[#B8BBC0]/50 transition-colors space-y-6"
             >
               <div className="space-y-4">
-                {/* Header with Quote Icon & Rating */}
-                <div className="flex items-center justify-between">
-                  <div className="flex text-amber-400">
-                    {[...Array(item.rating)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                    ))}
-                  </div>
-                  <Quote className="w-5 h-5 text-slate-600 group-hover:text-slate-400 transition-colors" />
+                <div className="flex items-center justify-between text-[#B8BBC0]">
+                  <span className="text-[10px] tracking-widest font-mono uppercase">
+                    {item.date}
+                  </span>
+                  <Quote className="w-4 h-4 text-[#74777C]" />
                 </div>
 
-                {/* Comment Text */}
-                <p className="text-xs text-slate-300 leading-relaxed font-light italic">
+                <p className="text-xs text-[#B8BBC0] leading-relaxed font-light">
                   "{item.comment}"
                 </p>
               </div>
 
-              {/* Client Info */}
-              <div className="pt-4 mt-6 border-t border-slate-800/80 flex items-center justify-between">
+              <div className="pt-4 border-t border-[#74777C]/20 flex items-center justify-between">
                 <div>
                   <div className="flex items-center space-x-1.5">
-                    <span className="font-bold text-xs text-slate-100">{item.name}</span>
-                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                    <span className="font-semibold text-xs text-[#F7F7F5]">{item.name}</span>
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#B8BBC0]" />
                   </div>
-                  <span className="text-[10px] text-slate-400 block mt-0.5">{item.role}</span>
+                  <span className="text-[10px] text-[#74777C] block">{item.role}</span>
                 </div>
-                <span className="text-[9px] text-slate-500">{item.date}</span>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Action Button */}
-        <div className="mt-12 text-center flex justify-center w-full">
-          <button
-            onClick={onOpenEmergencyModal}
-            className="silver-button w-full sm:w-auto px-8 py-3.5 rounded-lg text-xs font-bold uppercase tracking-widest inline-flex items-center justify-center space-x-2.5 shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer"
-          >
-            <MessageCircle className="w-4 h-4 fill-current" />
-            <span>FALAR COM A ADVOGADA AGORA</span>
-          </button>
         </div>
 
       </div>

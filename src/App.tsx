@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
+import { DobraHeaderNav } from './components/DobraHeaderNav';
 import { HeroFold } from './components/HeroFold';
 import { SecondFold } from './components/SecondFold';
+import { PracticeAreasFold } from './components/PracticeAreasFold';
 import { ThirdFold } from './components/ThirdFold';
 import { FourthFold } from './components/FourthFold';
 import { FifthFold } from './components/FifthFold';
+import { HowItWorksFold } from './components/HowItWorksFold';
+import { EditorialContentFold } from './components/EditorialContentFold';
+import { FinalCallFold } from './components/FinalCallFold';
 import { TestimonialsFold } from './components/TestimonialsFold';
 import { FooterFold } from './components/FooterFold';
-import { DobraHeaderNav } from './components/DobraHeaderNav';
 import { EmergencyModal } from './components/EmergencyModal';
 import { EmergencyContact } from './types';
 
@@ -15,57 +19,57 @@ export default function App() {
 
   const emergencyContact: EmergencyContact = {
     lawyerName: "Dra. Deyse Ramaiane",
-    oabNumber: "Advocacia Criminal",
+    oabNumber: "Advocacia Criminal Estratégica",
     phone: "(92) 99348-0017",
     whatsappNumber: "5592993480017",
     whatsappMessage: "Olá Dra. Deyse Ramaiane, preciso de atendimento em advocacia criminalista.",
   };
 
+  const handleOpenModal = () => setIsEmergencyModalOpen(true);
+
   return (
-    <div className="min-h-screen bg-[#07080b] text-slate-100 flex flex-col selection:bg-slate-300 selection:text-black">
+    <div className="min-h-screen bg-[#0B0B0C] text-[#F7F7F5] flex flex-col selection:bg-[#B8BBC0] selection:text-[#0B0B0C]">
       
-      {/* Header Nav Bar */}
-      <DobraHeaderNav
-        onOpenEmergencyModal={() => setIsEmergencyModalOpen(true)}
-      />
+      {/* Header Navigation Bar */}
+      <DobraHeaderNav onOpenEmergencyModal={handleOpenModal} />
 
-      {/* Main Sections */}
+      {/* Main Content Sections */}
       <main className="flex-1 w-full">
-        {/* Primeira Dobra (Hero + Áreas de Atuação) */}
-        <HeroFold
-          onOpenEmergencyModal={() => setIsEmergencyModalOpen(true)}
-        />
+        {/* Capa Principal / Hero */}
+        <HeroFold onOpenEmergencyModal={handleOpenModal} />
 
-        {/* Segunda Dobra */}
+        {/* 1. Apresentação Profissional */}
         <SecondFold />
 
-        {/* Terceira Dobra */}
-        <ThirdFold
-          onOpenEmergencyModal={() => setIsEmergencyModalOpen(true)}
-        />
+        {/* 2. Áreas de Atuação */}
+        <PracticeAreasFold onOpenEmergencyModal={handleOpenModal} />
 
-        {/* Quarta Dobra - Como eu posso te ajudar */}
-        <FourthFold
-          onOpenEmergencyModal={() => setIsEmergencyModalOpen(true)}
-        />
+        {/* 3. Situações que Exigem Atuação Imediata */}
+        <ThirdFold onOpenEmergencyModal={handleOpenModal} />
 
-        {/* Quinta Dobra - Por que escolher a Deyse Ramaiane Advocacia Criminal */}
-        <FifthFold
-          onOpenEmergencyModal={() => setIsEmergencyModalOpen(true)}
-        />
+        {/* 4. Destaque - Tráfico de Drogas */}
+        <FourthFold onOpenEmergencyModal={handleOpenModal} />
 
-        {/* Sexta Dobra - Depoimentos e Avaliações de Clientes */}
-        <TestimonialsFold
-          onOpenEmergencyModal={() => setIsEmergencyModalOpen(true)}
-        />
+        {/* 5. Atuações Especializadas (Médicos, Empresas, Crimes Digitais, Influenciadores) */}
+        <FifthFold onOpenEmergencyModal={handleOpenModal} />
+
+        {/* 6. Como Funciona o Atendimento */}
+        <HowItWorksFold onOpenEmergencyModal={handleOpenModal} />
+
+        {/* 7. Conteúdo e Autoridade */}
+        <EditorialContentFold onOpenEmergencyModal={handleOpenModal} />
+
+        {/* 8. Chamada Final */}
+        <FinalCallFold onOpenEmergencyModal={handleOpenModal} />
+
+        {/* 9. Depoimentos */}
+        <TestimonialsFold onOpenEmergencyModal={handleOpenModal} />
       </main>
 
-      {/* Sétima Dobra - Rodapé completo */}
-      <FooterFold
-        onOpenEmergencyModal={() => setIsEmergencyModalOpen(true)}
-      />
+      {/* Rodapé */}
+      <FooterFold onOpenEmergencyModal={handleOpenModal} />
 
-      {/* Emergency Contact Modal */}
+      {/* Emergency / Contact Modal */}
       <EmergencyModal
         isOpen={isEmergencyModalOpen}
         onClose={() => setIsEmergencyModalOpen(false)}
@@ -75,6 +79,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
