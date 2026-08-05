@@ -27,25 +27,25 @@ export const HeroFold: React.FC<HeroFoldProps> = ({ onOpenEmergencyModal }) => {
       </div>
 
       {/* Main Content Container */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 w-full z-10 relative pb-16 pt-28 sm:py-24 lg:py-32">
-        <div className="max-w-xl lg:max-w-xl space-y-7 text-left">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 w-full z-10 relative pb-16 pt-32 sm:py-24 lg:py-32">
+        <div className="max-w-xl space-y-7 text-center lg:text-left mx-auto lg:mx-0 flex flex-col items-center lg:items-start">
           
           {/* Main Display Title */}
-          <div className="space-y-2.5">
-            <h1 className="font-serif-title text-4xl xs:text-5xl sm:text-7xl lg:text-[5.5rem] xl:text-[6.2rem] font-light leading-[0.95] text-[#F7F7F5] tracking-tight uppercase drop-shadow-md">
+          <div className="space-y-2.5 w-full">
+            <h1 className="font-serif-title text-5xl xs:text-6xl sm:text-7xl lg:text-[5.5rem] xl:text-[6.2rem] font-light leading-[0.92] text-[#F7F7F5] tracking-tight uppercase drop-shadow-lg">
               DRA.<br />
               RAMAIANE
             </h1>
-            <p className="text-xs sm:text-sm tracking-[0.3em] text-[#B8BBC0] uppercase font-medium pt-1">
+            <p className="text-xs sm:text-sm tracking-[0.3em] text-[#B8BBC0] uppercase font-medium pt-1 text-center lg:text-left">
               ADVOCACIA CRIMINAL
             </p>
           </div>
 
           {/* Action Button */}
-          <div className="pt-2 sm:pt-4">
+          <div className="pt-2 sm:pt-4 w-full flex justify-center lg:justify-start">
             <button
               onClick={onOpenEmergencyModal}
-              className="w-full sm:w-auto border border-[#F7F7F5]/80 hover:border-[#F7F7F5] bg-[#0B0B0C]/80 sm:bg-[#0B0B0C]/60 hover:bg-white/10 text-[#F7F7F5] px-7 py-3.5 rounded-sm text-xs font-semibold uppercase tracking-widest flex items-center justify-center space-x-3 transition-all cursor-pointer backdrop-blur-md shadow-2xl"
+              className="w-full max-w-sm sm:w-auto border border-[#F7F7F5]/80 hover:border-[#F7F7F5] bg-[#0B0B0C]/85 sm:bg-[#0B0B0C]/60 hover:bg-white/10 text-[#F7F7F5] px-7 py-3.5 rounded-sm text-xs font-semibold uppercase tracking-widest flex items-center justify-center space-x-3 transition-all cursor-pointer backdrop-blur-md shadow-2xl"
             >
               <MessageCircle className="w-4 h-4 text-[#F7F7F5]" />
               <span>FALAR COM A ADVOGADA</span>
