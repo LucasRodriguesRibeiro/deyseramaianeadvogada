@@ -26,9 +26,9 @@ export const HeroFold: React.FC<HeroFoldProps> = ({ onOpenEmergencyModal }) => {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 w-full z-10 relative py-24 lg:py-32">
         <div className="max-w-xl lg:max-w-xl space-y-8 text-left">
           
-          {/* Main Display Title - Identical to Reference Screenshot */}
+          {/* Main Display Title */}
           <div className="space-y-3">
-            <h1 className="font-serif-title text-6xl sm:text-7xl lg:text-[5.5rem] xl:text-[6.2rem] font-light leading-[0.92] text-[#F7F7F5] tracking-tight uppercase">
+            <h1 className="font-serif-title text-4xl xs:text-5xl sm:text-7xl lg:text-[5.5rem] xl:text-[6.2rem] font-light leading-[0.92] text-[#F7F7F5] tracking-tight uppercase">
               DRA.<br />
               RAMAIANE
             </h1>
@@ -37,11 +37,11 @@ export const HeroFold: React.FC<HeroFoldProps> = ({ onOpenEmergencyModal }) => {
             </p>
           </div>
 
-          {/* Action Button - Identical to Reference Screenshot */}
+          {/* Action Button */}
           <div className="pt-4">
             <button
               onClick={onOpenEmergencyModal}
-              className="border border-[#F7F7F5]/80 hover:border-[#F7F7F5] bg-[#0B0B0C]/60 hover:bg-white/10 text-[#F7F7F5] px-7 py-3.5 rounded-sm text-xs font-semibold uppercase tracking-widest flex items-center space-x-3 transition-all cursor-pointer backdrop-blur-sm"
+              className="w-full sm:w-auto border border-[#F7F7F5]/80 hover:border-[#F7F7F5] bg-[#0B0B0C]/60 hover:bg-white/10 text-[#F7F7F5] px-7 py-3.5 rounded-sm text-xs font-semibold uppercase tracking-widest flex items-center justify-center space-x-3 transition-all cursor-pointer backdrop-blur-sm"
             >
               <MessageCircle className="w-4 h-4 text-[#F7F7F5]" />
               <span>FALAR COM A ADVOGADA</span>

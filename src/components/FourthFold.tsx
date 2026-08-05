@@ -56,7 +56,7 @@ export const FourthFold: React.FC<FourthFoldProps> = ({ onOpenEmergencyModal }) 
           <div className="pt-2">
             <button
               onClick={onOpenEmergencyModal}
-              className="silver-button px-8 py-4 rounded-md text-xs font-bold uppercase tracking-widest flex items-center space-x-3 cursor-pointer"
+              className="silver-button w-full sm:w-auto px-8 py-4 rounded-md text-xs font-bold uppercase tracking-widest flex items-center justify-center space-x-3 cursor-pointer"
             >
               <span>CONHECER A ATUAÇÃO</span>
               <ArrowRight className="w-4 h-4" />

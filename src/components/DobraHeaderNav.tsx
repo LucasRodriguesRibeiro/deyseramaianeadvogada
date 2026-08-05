@@ -24,11 +24,11 @@ export const DobraHeaderNav: React.FC<DobraHeaderNavProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[64px]">
         
         {/* Brand Logo Image */}
-        <a href="#" className="flex items-center group shrink-0 py-1">
+        <a href="#" className="flex items-center group shrink-0 py-0.5 sm:py-1">
           <img
             src={logoImg}
             alt="Deyse Ramaiane Advocacia Criminal"
-            className="h-12 sm:h-16 lg:h-20 w-auto max-w-[260px] sm:max-w-[340px] lg:max-w-[420px] object-contain brightness-110 group-hover:opacity-90 transition-opacity"
+            className="h-10 sm:h-16 lg:h-20 w-auto max-w-[190px] sm:max-w-[340px] lg:max-w-[420px] object-contain brightness-110 group-hover:opacity-90 transition-opacity"
           />
         </a>
 
