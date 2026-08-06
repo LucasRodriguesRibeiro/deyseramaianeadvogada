@@ -57,17 +57,6 @@ export const HeroFold: React.FC<HeroFoldProps> = ({ onOpenEmergencyModal }) => {
         </div>
       </div>
 
-      {/* Floating Emergency Action Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <button
-          onClick={onOpenEmergencyModal}
-          className="p-4 bg-[#18191B] hover:bg-[#232528] text-[#F7F7F5] rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer border border-[#B8BBC0]/30"
-          aria-label="Solicitar Atendimento Urgente"
-        >
-          <MessageCircle className="w-6 h-6 text-[#B8BBC0]" />
-        </button>
-      </div>
-
     </section>
   );
 };
