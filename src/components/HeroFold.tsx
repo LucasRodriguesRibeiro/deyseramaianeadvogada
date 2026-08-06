@@ -15,7 +15,7 @@ export const HeroFold: React.FC<HeroFoldProps> = ({ onOpenEmergencyModal }) => {
         <img
           src={dobra1Img}
           alt="Deyse Ramaiane - Advocacia Criminal"
-          className="w-full h-full object-cover object-[55%_40%] sm:object-[65%_45%] lg:object-[70%_50%] scale-[1.3] sm:scale-[1.18] lg:scale-[1.05] contrast-105 brightness-105 opacity-90 sm:opacity-95 lg:opacity-100 transition-all duration-300"
+          className="w-full h-full object-cover object-[50%_30%] sm:object-[65%_45%] lg:object-[70%_50%] scale-[1.32] sm:scale-[1.18] lg:scale-[1.05] contrast-105 brightness-105 opacity-90 sm:opacity-95 lg:opacity-100 transition-all duration-300"
           onError={(e) => {
             (e.target as HTMLImageElement).src = "/dobra1.jfif";
           }}
