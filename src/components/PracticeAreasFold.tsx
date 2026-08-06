@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
-import hourglassBg from '../assets/images/hourglass_silver_dark_1785765462160.jpg';
 
 interface PracticeAreasFoldProps {
   onOpenEmergencyModal: () => void;
@@ -51,8 +50,32 @@ export const PracticeAreasFold: React.FC<PracticeAreasFoldProps> = ({ onOpenEmer
       desc: "Assistência jurídica a estrangeiros investigados, presos ou acusados de crimes no Brasil, com atuação desde a delegacia e audiência de custódia até o processo criminal e a execução penal."
     },
     {
-      title: "INVESTIGAÇÕES CRIMINAIS",
+      title: "INQUÉRITOS, INVESTIGAÇÕES E OPERAÇÕES POLICIAIS",
       desc: "Atuação desde as fases iniciais da investigação, com definição antecipada da estratégia de defesa."
+    },
+    {
+      title: "CRIMES PATRIMONIAIS",
+      desc: "Atuação em investigações e processos envolvendo estelionato, apropriação indébita, furto, roubo, receptação e extorsão."
+    },
+    {
+      title: "CRIMES FINANCEIROS E LAVAGEM DE DINHEIRO",
+      desc: "Defesa em investigações e processos relacionados a lavagem de capitais, delitos financeiros e operações patrimoniais investigadas."
+    },
+    {
+      title: "CRIMES TRIBUTÁRIOS E ECONÔMICOS",
+      desc: "Atuação em crimes contra a ordem tributária, econômica e em investigações decorrentes da atividade empresarial."
+    },
+    {
+      title: "CRIMES CONTRA A ADMINISTRAÇÃO PÚBLICA",
+      desc: "Defesa em casos envolvendo corrupção, peculato, concussão, prevaricação e outros delitos relacionados à Administração Pública."
+    },
+    {
+      title: "LICITAÇÕES E CONTRATOS PÚBLICOS",
+      desc: "Atuação criminal em investigações envolvendo licitações, contratos administrativos, empresários, gestores e agentes públicos."
+    },
+    {
+      title: "CRIMES CONTRA A HONRA E A IMAGEM",
+      desc: "Atuação em casos de calúnia, difamação e injúria, inclusive quando praticados no ambiente digital ou em redes sociais."
     }
   ];
 
@@ -63,7 +86,7 @@ export const PracticeAreasFold: React.FC<PracticeAreasFoldProps> = ({ onOpenEmer
       {/* Background Metallic Hourglass Image */}
       <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full z-0 opacity-15 pointer-events-none">
         <img
-          src={hourglassBg}
+          src="/images/hourglass_silver_dark_1785765462160.jpg"
           alt="Ampulheta Prata - Justiça Criminal"
           className="w-full h-full object-cover object-right filter contrast-125"
         />
@@ -109,7 +132,7 @@ export const PracticeAreasFold: React.FC<PracticeAreasFoldProps> = ({ onOpenEmer
                   onClick={onOpenEmergencyModal}
                   className="text-[11px] font-medium tracking-wider text-[#B8BBC0] group-hover:text-[#F7F7F5] flex items-center space-x-2 transition-colors cursor-pointer uppercase"
                 >
-                  <span>SOLICITAR ANÁLISE</span>
+                  <span>AGENDAR ATENDIMENTO</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

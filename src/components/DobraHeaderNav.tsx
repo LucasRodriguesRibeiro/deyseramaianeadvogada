@@ -58,7 +58,7 @@ export const DobraHeaderNav: React.FC<DobraHeaderNavProps> = ({
             className="border border-[#F7F7F5]/70 hover:border-[#F7F7F5] bg-transparent hover:bg-white/10 text-[#F7F7F5] px-4 py-2 rounded-sm text-[11px] font-semibold tracking-wider uppercase flex items-center space-x-2 transition-all cursor-pointer"
           >
             <Calendar className="w-3.5 h-3.5 text-[#F7F7F5]" />
-            <span>AGENDA ATENDIMENTO</span>
+            <span>AGENDAR ATENDIMENTO</span>
           </button>
         </div>
 
@@ -102,7 +102,7 @@ export const DobraHeaderNav: React.FC<DobraHeaderNavProps> = ({
               className="w-full silver-button py-3 px-5 rounded-md text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2.5 active:scale-95"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>SOLICITAR ATENDIMENTO →</span>
+              <span>AGENDAR ATENDIMENTO</span>
             </button>
           </div>
         </div>

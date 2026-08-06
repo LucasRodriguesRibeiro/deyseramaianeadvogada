@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowRight, PhoneCall } from 'lucide-react';
-import officeBg from '../assets/images/lawyer_office_bg_1785798115042.jpg';
 
 interface FinalCallFoldProps {
   onOpenEmergencyModal: () => void;
@@ -12,7 +11,7 @@ export const FinalCallFold: React.FC<FinalCallFoldProps> = ({ onOpenEmergencyMod
       {/* Subtle Background Image with Gradient Mask */}
       <div className="absolute inset-0 z-0 opacity-25 pointer-events-none">
         <img
-          src={officeBg}
+          src="/images/lawyer_office_bg_1785798115042.jpg"
           alt="Escritório de Advocacia Criminal"
           className="w-full h-full object-cover filter contrast-110 brightness-75"
         />
@@ -29,13 +28,15 @@ export const FinalCallFold: React.FC<FinalCallFoldProps> = ({ onOpenEmergencyMod
         </div>
 
         {/* Main Serif Headline */}
-        <h2 className="font-serif-title text-3xl sm:text-5xl lg:text-6xl font-normal text-[#F7F7F5] tracking-tight leading-tight max-w-4xl mx-auto">
-          DEFESA TÉCNICA, ESTRATÉGICA E RIGOROSA.
+        <h2 className="font-serif-title text-3xl sm:text-5xl lg:text-6xl font-normal text-[#F7F7F5] tracking-tight leading-tight max-w-4xl mx-auto uppercase">
+          TÉCNICA NA DEFESA.
+          <br className="hidden sm:inline" />
+          {' '}ESTRATÉGIA EM CADA DECISÃO.
         </h2>
 
         {/* Text paragraph */}
         <p className="text-[#B8BBC0] text-base sm:text-lg leading-relaxed font-light max-w-2xl mx-auto">
-          Se você ou sua empresa enfrentam uma situação de natureza criminal, agende um atendimento para avaliação do caso.
+          Diante de uma situação criminal, cada decisão importa. Atendimento jurídico especializado para análise do caso e definição da estratégia de atuação.
         </p>
 
         {/* CTA Buttons */}
@@ -44,16 +45,16 @@ export const FinalCallFold: React.FC<FinalCallFoldProps> = ({ onOpenEmergencyMod
             onClick={onOpenEmergencyModal}
             className="silver-button w-full sm:w-auto px-9 py-4 rounded-md text-xs font-bold uppercase tracking-widest flex items-center justify-center space-x-3 cursor-pointer shadow-lg"
           >
-            <span>SOLICITAR ATENDIMENTO</span>
+            <span>AGENDAR ATENDIMENTO</span>
             <ArrowRight className="w-4 h-4" />
           </button>
 
           <button
             onClick={onOpenEmergencyModal}
-            className="silver-outline-button w-full sm:w-auto px-8 py-4 rounded-md text-xs uppercase tracking-widest flex items-center justify-center space-x-3 cursor-pointer"
+            className="silver-outline-button w-full sm:w-auto px-8 py-4 rounded-md text-xs font-semibold uppercase tracking-widest flex items-center justify-center space-x-3 cursor-pointer"
           >
             <PhoneCall className="w-4 h-4" />
-            <span>ATENDIMENTO DE URGÊNCIA (24H)</span>
+            <span>ATENDIMENTO DE URGÊNCIA 24H</span>
           </button>
         </div>
 

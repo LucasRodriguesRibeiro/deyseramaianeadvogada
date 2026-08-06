@@ -1,6 +1,5 @@
 import React from 'react';
 import { ShieldAlert, AlertCircle, PhoneCall } from 'lucide-react';
-import prisonBg from '../assets/images/prison_handcuffs_bg_1785764557592.jpg';
 
 interface ThirdFoldProps {
   onOpenEmergencyModal: () => void;
@@ -21,7 +20,7 @@ export const ThirdFold: React.FC<ThirdFoldProps> = ({ onOpenEmergencyModal }) =>
       {/* Dark Dramatic Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
         <img
-          src={prisonBg}
+          src="/images/prison_handcuffs_bg_1785764557592.jpg"
           alt="Situações de Urgência Criminal"
           className="w-full h-full object-cover object-center filter contrast-125 grayscale"
         />

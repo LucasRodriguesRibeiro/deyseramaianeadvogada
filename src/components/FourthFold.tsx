@@ -1,6 +1,16 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import drugLawBg from '../assets/images/drug_law_defense_bg.png';
+import photoBg from '../assets/images/dobra1.jpeg';
+import { 
+  ArrowRight, 
+  Search, 
+  FileSearch, 
+  UserCheck, 
+  Unlock, 
+  FileText, 
+  Scale, 
+  FileStack, 
+  Landmark 
+} from 'lucide-react';
 
 interface FourthFoldProps {
   onOpenEmergencyModal: () => void;
@@ -8,12 +18,14 @@ interface FourthFoldProps {
 
 export const FourthFold: React.FC<FourthFoldProps> = ({ onOpenEmergencyModal }) => {
   const steps = [
-    "Flagrante",
-    "Busca e apreensão",
-    "Audiência de custódia",
-    "Processo criminal",
-    "Recursos",
-    "Execução penal"
+    { label: "FLAGRANTE", icon: Search },
+    { label: "AUDIÊNCIA DE CUSTÓDIA", icon: UserCheck },
+    { label: "LIBERDADE E MEDIDAS URGENTES", icon: Unlock },
+    { label: "BUSCA E APREENSÃO", icon: FileSearch },
+    { label: "INQUÉRITO POLICIAL", icon: FileText },
+    { label: "PROCESSO CRIMINAL", icon: Scale },
+    { label: "RECURSOS", icon: FileStack },
+    { label: "EXECUÇÃO PENAL", icon: Landmark }
   ];
 
   return (
@@ -35,21 +47,25 @@ export const FourthFold: React.FC<FourthFoldProps> = ({ onOpenEmergencyModal }) 
 
           {/* Text Paragraph */}
           <p className="text-[#18191B] text-base sm:text-lg leading-relaxed font-light">
-            Defesa técnica em investigações e processos relacionados à Lei de Drogas, com análise individualizada das circunstâncias do caso, das provas produzidas e da legalidade dos atos investigativos.
+            Defesa técnica desde os primeiros atos da investigação até o processo e a execução penal, com análise criteriosa das provas, da legalidade dos procedimentos e das circunstâncias específicas de cada caso.
           </p>
 
-          {/* Discrete Stages Bar */}
-          <div className="pt-4 pb-2 border-y border-[#B8BBC0]/50 flex flex-wrap items-center gap-2 text-xs font-medium text-[#18191B] tracking-wider uppercase">
-            {steps.map((step, idx) => (
-              <React.Fragment key={step}>
-                <span className="bg-[#18191B] text-[#F7F7F5] px-3.5 py-1.5 rounded-sm">
-                  {step}
-                </span>
-                {idx < steps.length - 1 && (
-                  <span className="text-[#74777C]">•</span>
-                )}
-              </React.Fragment>
-            ))}
+          {/* Discrete Stages Bar with Icons */}
+          <div className="pt-4 pb-4 border-y border-[#B8BBC0]/50 flex flex-wrap items-center gap-2.5 sm:gap-3">
+            {steps.map((step, idx) => {
+              const IconComponent = step.icon;
+              return (
+                <React.Fragment key={step.label}>
+                  <div className="bg-[#18191B] text-[#F7F7F5] px-4 py-2.5 rounded-lg flex items-center space-x-2.5 text-xs font-semibold tracking-wider shadow-sm hover:bg-[#000000] transition-colors">
+                    <IconComponent className="w-4 h-4 text-[#D1D5DB] shrink-0" />
+                    <span className="whitespace-nowrap">{step.label}</span>
+                  </div>
+                  {idx < steps.length - 1 && (
+                    <span className="text-[#74777C] text-sm font-bold">•</span>
+                  )}
+                </React.Fragment>
+              );
+            })}
           </div>
 
           {/* Action Button */}
@@ -58,7 +74,7 @@ export const FourthFold: React.FC<FourthFoldProps> = ({ onOpenEmergencyModal }) 
               onClick={onOpenEmergencyModal}
               className="silver-button w-full sm:w-auto px-8 py-4 rounded-md text-xs font-bold uppercase tracking-widest flex items-center justify-center space-x-3 cursor-pointer"
             >
-              <span>CONHECER A ATUAÇÃO</span>
+              <span>AGENDAR ATENDIMENTO</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -68,8 +84,8 @@ export const FourthFold: React.FC<FourthFoldProps> = ({ onOpenEmergencyModal }) 
         <div className="lg:col-span-5 flex justify-center">
           <div className="relative w-full max-w-md aspect-[4/3] sm:aspect-[14/10] rounded-lg overflow-hidden border border-[#B8BBC0]/50 shadow-xl group">
             <img
-              src={drugLawBg}
-              alt="Atuação Especializada em Tráfico de Drogas e Lei de Drogas"
+              src={photoBg}
+              alt="Deyse Ramaiane - Atuação Especializada em Tráfico de Drogas"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 contrast-105 brightness-95"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0C]/40 via-transparent to-transparent"></div>

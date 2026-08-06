@@ -49,10 +49,10 @@ export const TestimonialsFold: React.FC<TestimonialsFoldProps> = ({ onOpenEmerge
           </div>
 
           <h2 className="font-serif-title text-3xl sm:text-4xl lg:text-[2.75rem] font-normal text-[#F7F7F5] tracking-tight uppercase">
-            DEPOIMENTOS
+            DEPOIMENTOS DE CLIENTES
           </h2>
-          <p className="text-[#B8BBC0] text-base sm:text-lg font-light">
-            Experiências de quem confiou em nosso trabalho.
+          <p className="text-[#B8BBC0] text-base sm:text-lg font-light leading-relaxed">
+            Experiências de quem confiou sua defesa ao nosso trabalho.
           </p>
         </div>
 

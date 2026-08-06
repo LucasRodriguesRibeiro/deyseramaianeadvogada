@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Stethoscope, Briefcase, Smartphone, Sparkles, Trees } from 'lucide-react';
+import { ArrowRight, Stethoscope, Briefcase, Smartphone, Sparkles, Trees, Landmark, UserCheck, Coins, Globe } from 'lucide-react';
 
 interface FifthFoldProps {
   onOpenEmergencyModal: () => void;
@@ -9,14 +9,14 @@ export const FifthFold: React.FC<FifthFoldProps> = ({ onOpenEmergencyModal }) =>
   const sectors = [
     {
       icon: Briefcase,
-      tag: "EMPRESAS & GESTORES",
+      tag: "EMPRESAS & EXECUTIVOS",
       title: "Empresários, Executivos e Sociedades",
       desc: "Proteção contra riscos decorrentes de decisões corporativas, operações financeiras, tributárias, lavagem de dinheiro, fraudes e procedimentos de persecução penal."
     },
     {
       icon: Stethoscope,
       tag: "SAÚDE & MEDICINA",
-      title: "Médicos, Clínicas e Instituições",
+      title: "Médicos, Clínicas e Instituições de Saúde",
       desc: "Defesa técnica preventiva e atuante diante de questionamentos ético-penais e apuração de conduta profissional, preservando a reputação da carreira."
     },
     {
@@ -27,15 +27,39 @@ export const FifthFold: React.FC<FifthFoldProps> = ({ onOpenEmergencyModal }) =>
     },
     {
       icon: Smartphone,
-      tag: "TECNOLOGIA & FINANÇAS",
+      tag: "TECNOLOGIA & AMBIENTE DIGITAL",
       title: "Crimes Digitais e Fraudes Virtuais",
       desc: "Assistência jurídica especializada em investigações de crimes cibernéticos, fraudes bancárias, recuperação de ativos e ilícitos no ambiente digital."
     },
     {
       icon: Sparkles,
-      tag: "MÍDIA & DIGITAL",
+      tag: "MÍDIA & CRIADORES DE CONTEÚDO",
       title: "Influenciadores e Criadores de Conteúdo",
       desc: "Atuação estratégica na defesa de personalidades públicas e criadores de conteúdo diante de operações policiais, exposições e procedimentos na internet."
+    },
+    {
+      icon: Landmark,
+      tag: "SETOR PÚBLICO & LICITAÇÕES",
+      title: "Gestores e Agentes Públicos",
+      desc: "Defesa em investigações e processos relacionados ao exercício da função pública, licitações, contratos administrativos e crimes contra a Administração Pública."
+    },
+    {
+      icon: UserCheck,
+      tag: "EXERCÍCIO PROFISSIONAL",
+      title: "Profissionais Liberais",
+      desc: "Atuação preventiva e defesa criminal diante de riscos decorrentes do exercício profissional e de atividades regulamentadas."
+    },
+    {
+      icon: Coins,
+      tag: "MERCADO FINANCEIRO & FINTECHS",
+      title: "Instituições Financeiras, Fintechs e Investidores",
+      desc: "Atuação em investigações envolvendo operações financeiras, fraudes, lavagem de dinheiro, patrimônio e delitos econômicos."
+    },
+    {
+      icon: Globe,
+      tag: "ATUAÇÃO INTERNACIONAL",
+      title: "Estrangeiros e Empresas Internacionais",
+      desc: "Assistência e defesa criminal em investigações e processos com repercussões penais no Brasil."
     }
   ];
 
@@ -50,16 +74,16 @@ export const FifthFold: React.FC<FifthFoldProps> = ({ onOpenEmergencyModal }) =>
             <span>GESTÃO DE RISCOS PENAIS</span>
           </div>
 
-          <h2 className="font-serif-title text-3xl sm:text-4xl lg:text-[2.75rem] font-normal text-[#F7F7F5] tracking-tight">
-            ATUAÇÃO POR SETOR E ATIVIDADE
+          <h2 className="font-serif-title text-3xl sm:text-4xl lg:text-[2.75rem] font-normal text-[#F7F7F5] tracking-tight uppercase">
+            ATUAÇÃO ESPECIALIZADA POR SETOR
           </h2>
 
-          <p className="text-[#B8BBC0] text-sm sm:text-base font-light">
-            A advocacia penal contemporânea atua onde o risco penal surge, salvaguardando a liberdade, o patrimônio e a reputação de profissionais e organizações.
+          <p className="text-[#B8BBC0] text-sm sm:text-base font-light leading-relaxed">
+            Estratégias de prevenção e defesa criminal desenvolvidas de acordo com os riscos específicos de cada atividade profissional e empresarial.
           </p>
         </div>
 
-        {/* Minimalist Sector List Grid */}
+        {/* Minimalist Sector List Grid (3x3 on large screens) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sectors.map((sec, idx) => {
             const Icon = sec.icon;
@@ -92,7 +116,7 @@ export const FifthFold: React.FC<FifthFoldProps> = ({ onOpenEmergencyModal }) =>
                     onClick={onOpenEmergencyModal}
                     className="text-[11px] font-medium tracking-wider text-[#B8BBC0] group-hover:text-[#F7F7F5] flex items-center space-x-2 transition-colors cursor-pointer uppercase"
                   >
-                    <span>CONSULTAR ATUAÇÃO</span>
+                    <span>AGENDAR ATENDIMENTO</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>

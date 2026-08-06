@@ -1,8 +1,5 @@
 import React from 'react';
 import { BookOpen, ArrowUpRight } from 'lucide-react';
-import prisonImg from '../assets/images/prison_handcuffs_bg_1785764557592.jpg';
-import heroLawyerBg from '../assets/images/hero_lawyer_bg_1785760985867.jpg';
-import officeBg from '../assets/images/lawyer_office_bg_1785798115042.jpg';
 
 interface EditorialContentFoldProps {
   onOpenEmergencyModal: () => void;
@@ -15,21 +12,21 @@ export const EditorialContentFold: React.FC<EditorialContentFoldProps> = ({ onOp
       date: "ARTIGO TÉCNICO",
       title: "Criptomoedas e Direito Penal: Os Desafios das Investigações em Crimes Digitais",
       excerpt: "Uma análise profunda sobre a rastreabilidade patrimonial, a juridicidade das apreensões de ativos virtuais e as garantias fundamentais do investigado.",
-      image: prisonImg
+      image: "/images/prison_handcuffs_bg_1785764557592.jpg"
     },
     {
       category: "PROCESSO PENAL",
       date: "ANÁLISE JURISPRUDENCIAL",
       title: "Prisão Preventiva e os Limites Cautelares na Jurisprudência Superior",
       excerpt: "Estudo crítico sobre a exigência de fundamentação concreta para a decretação de prisões cautelares e os critérios de revogação no STJ e STF.",
-      image: heroLawyerBg
+      image: "/images/hero_lawyer_bg_1785760985867.jpg"
     },
     {
       category: "PENAL EMPRESARIAL",
       date: "PARECER EDITORIAL",
       title: "Direito Penal Empresarial: A Relevância da Gestão Preventiva de Riscos",
       excerpt: "Como a atuação consultiva prévia e a estruturação defensiva antecipada protegem executivos e organizações contra riscos de responsabilização penal.",
-      image: officeBg
+      image: "/images/lawyer_office_bg_1785798115042.jpg"
     }
   ];
 

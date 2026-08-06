@@ -7,6 +7,12 @@
   .font-sans-clean {
     font-family: 'Inter', 'Manrope', 'Poppins', sans-serif;
   }
+  .font-handwriting {
+    font-family: 'Alex Brush', 'Great Vibes', cursive;
+  }
+  .font-signature {
+    font-family: 'Herr Von Muellerhoff', 'Monsieur La Doulaise', 'Pinyon Script', 'Allison', 'Birthstone', cursive;
+  }
 }
 
 html {

@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    assetsInclude: ['**/*.jfif', '**/*.JFIF'],
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
