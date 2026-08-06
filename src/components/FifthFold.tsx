@@ -1,11 +1,26 @@
-import React from 'react';
-import { ArrowRight, Stethoscope, Briefcase, Smartphone, Sparkles, Trees, Landmark, UserCheck, Coins, Globe } from 'lucide-react';
+import React, { useState } from 'react';
+import { 
+  ArrowRight, 
+  ChevronDown, 
+  ChevronUp, 
+  Stethoscope, 
+  Briefcase, 
+  Smartphone, 
+  Sparkles, 
+  Trees, 
+  Landmark, 
+  UserCheck, 
+  Coins, 
+  Globe 
+} from 'lucide-react';
 
 interface FifthFoldProps {
   onOpenEmergencyModal: () => void;
 }
 
 export const FifthFold: React.FC<FifthFoldProps> = ({ onOpenEmergencyModal }) => {
+  const [showAll, setShowAll] = useState(false);
+
   const sectors = [
     {
       icon: Briefcase,
@@ -63,6 +78,8 @@ export const FifthFold: React.FC<FifthFoldProps> = ({ onOpenEmergencyModal }) =>
     }
   ];
 
+  const visibleSectors = showAll ? sectors : sectors.slice(0, 3);
+
   return (
     <section id="especialidades" className="relative w-full bg-[#0B0B0C] text-[#F7F7F5] py-20 sm:py-28 font-sans-clean border-t border-[#18191B]">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 space-y-14">
@@ -83,9 +100,9 @@ export const FifthFold: React.FC<FifthFoldProps> = ({ onOpenEmergencyModal }) =>
           </p>
         </div>
 
-        {/* Minimalist Sector List Grid (3x3 on large screens) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sectors.map((sec, idx) => {
+        {/* Minimalist Sector List Grid (3 initially, expand on click) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500">
+          {visibleSectors.map((sec, idx) => {
             const Icon = sec.icon;
             return (
               <div
@@ -123,6 +140,27 @@ export const FifthFold: React.FC<FifthFoldProps> = ({ onOpenEmergencyModal }) =>
               </div>
             );
           })}
+        </div>
+
+        {/* Ver Mais / Ver Menos Button */}
+        <div className="flex justify-center pt-4">
+          {!showAll ? (
+            <button
+              onClick={() => setShowAll(true)}
+              className="silver-button px-8 py-3.5 rounded-md text-xs font-bold uppercase tracking-widest flex items-center space-x-3 cursor-pointer transition-all shadow-lg hover:scale-[1.02]"
+            >
+              <span>VER MAIS ÁREAS DE ATUAÇÃO</span>
+              <ChevronDown className="w-4 h-4" />
+            </button>
+          ) : (
+            <button
+              onClick={() => setShowAll(false)}
+              className="border border-[#74777C]/40 hover:border-[#F7F7F5] text-[#B8BBC0] hover:text-[#F7F7F5] bg-[#18191B] px-8 py-3.5 rounded-md text-xs font-semibold uppercase tracking-widest flex items-center space-x-3 cursor-pointer transition-all"
+            >
+              <span>VER MENOS</span>
+              <ChevronUp className="w-4 h-4" />
+            </button>
+          )}
         </div>
 
       </div>
