@@ -118,13 +118,10 @@ export const FooterFold: React.FC<FooterFoldProps> = ({ onOpenEmergencyModal }) 
 
       </div>
 
-      {/* OAB Code of Ethics Disclaimer & Copyright */}
+      {/* Copyright */}
       <div className="bg-[#050506] border-t border-[#18191B] py-6 px-6 sm:px-10 lg:px-12 text-xs text-[#9DA0A6] text-center leading-relaxed font-light">
-        <div className="max-w-7xl mx-auto space-y-3">
-          <p className="max-w-4xl mx-auto text-xs sm:text-[13px] text-[#A0A3A8]">
-            Este site possui caráter meramente institucional e informativo, em conformidade com o Código de Ética e Disciplina da OAB (Provimento 205/2021).
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-between pt-3 border-t border-[#18191B] text-xs text-[#9DA0A6] gap-2">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-[#9DA0A6] gap-2">
             <span>
               © {new Date().getFullYear()} Deyse Ramaiane Advocacia Criminal. Todos os direitos reservados.
             </span>
