@@ -1,5 +1,5 @@
 import React from 'react';
-import photoBg from '../assets/images/dobra1.jpeg';
+import dobra4Img from '../assets/images/dobra4.jpeg';
 import { 
   ArrowRight, 
   Search, 
@@ -84,8 +84,11 @@ export const FourthFold: React.FC<FourthFoldProps> = ({ onOpenEmergencyModal }) 
         <div className="lg:col-span-5 flex justify-center">
           <div className="relative w-full max-w-md aspect-[4/3] sm:aspect-[14/10] rounded-lg overflow-hidden border border-[#B8BBC0]/50 shadow-xl group">
             <img
-              src={photoBg}
+              src={dobra4Img}
               alt="Deyse Ramaiane - Atuação Especializada em Tráfico de Drogas"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = "/dobra4.jpeg";
+              }}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 contrast-105 brightness-95"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0C]/40 via-transparent to-transparent"></div>
