@@ -1,33 +1,33 @@
 import React from 'react';
 import dobra2Img from '../assets/images/dobra2.jpeg';
-import { Briefcase, UserCheck, Landmark, Smartphone, ShieldCheck } from 'lucide-react';
+import { Shield, Scale, Unlock, Landmark, Smartphone } from 'lucide-react';
 
 export const SecondFold: React.FC = () => {
   const quadroItems = [
     {
-      title: "EMPRESARIAL",
-      desc: "Prevenção e defesa diante de riscos e investigações criminais.",
-      icon: Briefcase
+      title: "DEFESA CRIMINAL",
+      desc: "Atuação estratégica em investigações, ações penais e medidas de urgência.",
+      icon: Shield
     },
     {
-      title: "PROFISSIONAL",
-      desc: "Proteção jurídica em situações decorrentes do exercício profissional.",
-      icon: UserCheck
+      title: "TRÁFICO DE DROGAS",
+      desc: "Defesa em investigações e processos relacionados à Lei de Drogas.",
+      icon: Scale
     },
     {
-      title: "FINANCEIRO",
-      desc: "Atuação diante de investigações envolvendo operações financeiras e patrimônio.",
+      title: "PRISÕES E MEDIDAS URGENTES",
+      desc: "Atuação em prisões em flagrante, audiências de custódia, liberdade provisória e habeas corpus.",
+      icon: Unlock
+    },
+    {
+      title: "CRIMES ECONÔMICOS E EMPRESARIAIS",
+      desc: "Defesa em investigações envolvendo atividade empresarial, patrimônio e operações financeiras.",
       icon: Landmark
     },
     {
-      title: "DIGITAL",
-      desc: "Defesa e orientação em situações com repercussão criminal no ambiente digital.",
+      title: "CRIMES DIGITAIS",
+      desc: "Defesa e orientação em investigações e processos com repercussão criminal no ambiente digital.",
       icon: Smartphone
-    },
-    {
-      title: "PREVENTIVO",
-      desc: "Identificação e gestão de riscos antes da instauração de procedimentos criminais.",
-      icon: ShieldCheck
     }
   ];
 
@@ -78,7 +78,7 @@ export const SecondFold: React.FC = () => {
           {/* Quadro: Areas / Focus Cards */}
           <div className="pt-2 space-y-3">
             <div className="text-xs font-semibold uppercase tracking-widest text-[#74777C]">
-              Áreas de Foco e Prevenção de Riscos
+              ÁREAS DE ATUAÇÃO
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
@@ -107,11 +107,11 @@ export const SecondFold: React.FC = () => {
           {/* Quote & Signature Block */}
           <div className="pt-6 border-t border-[#B8BBC0]/50 space-y-4">
             <blockquote className="font-serif-title italic text-lg sm:text-xl text-[#0B0B0C] leading-snug">
-              “A defesa criminal não começa no processo. Começa na identificação do risco”.
+              “Cada caso exige mais do que uma defesa. Exige estratégia.”
             </blockquote>
             
             <div className="pt-2 flex flex-col items-start">
-              <span className="font-signature text-5xl sm:text-6xl text-[#0B0B0C] leading-tight select-none tracking-normal font-normal">
+              <span className="font-['Alex_Brush',cursive] text-5xl sm:text-6xl text-[#0B0B0C] leading-tight select-none tracking-wide font-normal">
                 Ramaiane
               </span>
             </div>
@@ -123,4 +123,3 @@ export const SecondFold: React.FC = () => {
     </section>
   );
 };
-
