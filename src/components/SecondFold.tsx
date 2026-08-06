@@ -60,22 +60,18 @@ export const SecondFold: React.FC = () => {
               <span className="w-8 h-[1px] bg-[#74777C]"></span>
               <span>SOBRE RAMAIANE</span>
             </div>
-
-            <h2 className="font-serif-title text-3xl sm:text-4xl lg:text-[2.5rem] font-normal leading-tight text-[#0B0B0C] tracking-tight uppercase">
-              O DIREITO PENAL ESTÁ ONDE O RISCO PENAL ESTÁ.
-            </h2>
           </div>
 
           {/* Paragraphs */}
           <div className="space-y-4 text-[#18191B] text-base leading-relaxed font-light">
             <p>
-              Ao longo de mais de uma década dedicada à advocacia criminal, desenvolvi uma atuação pautada em técnica, estratégia e análise individualizada de cada caso.
+              Há mais de uma década, atuo na advocacia criminal com uma abordagem pautada em técnica, estratégia e análise individualizada de cada caso.
             </p>
             <p>
-              A advocacia criminal contemporânea ultrapassa os limites da defesa tradicional. O risco penal pode surgir em decisões empresariais, atividades profissionais, operações financeiras, relações digitais e situações da vida privada.
+              A defesa não começa apenas no processo. Muitas vezes, começa antes: na investigação, na prevenção de riscos e na definição da estratégia capaz de proteger direitos, liberdade e reputação.
             </p>
             <p>
-              Por isso, a atuação começa antes mesmo do processo: na prevenção, orientação e construção da estratégia de defesa, sempre voltada à proteção da liberdade, do patrimônio e da reputação.
+              Minha atuação acompanha cada caso de forma próxima, sigilosa e estratégica, desde os primeiros atos investigativos até processos, recursos e medidas perante os tribunais.
             </p>
           </div>
 
