@@ -10,20 +10,27 @@ interface State {
 }
 
 export class ErrorBoundary extends Component<Props, State> {
-  public override state: State = {
-    hasError: false,
-    error: null,
-  };
+  props: Props;
+  state: State;
 
-  public static getDerivedStateFromError(error: Error): State {
+  constructor(props: Props) {
+    super(props);
+    this.props = props;
+    this.state = {
+      hasError: false,
+      error: null,
+    };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  public override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Uncaught error:', error, errorInfo);
   }
 
-  public override render() {
+  render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen bg-[#0B0B0C] text-[#F7F7F5] flex flex-col items-center justify-center p-6 text-center">
