@@ -36,7 +36,7 @@ export const SecondFold: React.FC = () => {
       <div id="apresentacao" className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
         
         {/* Left Column: Professional Portrait */}
-        <div className="lg:col-span-5 flex flex-col items-center sticky top-24">
+        <div className="lg:col-span-5 flex flex-col items-center relative lg:sticky lg:top-24">
           <div className="relative w-full max-w-md aspect-[4/5] rounded-lg overflow-hidden border border-[#B8BBC0]/60 shadow-xl">
             <img
               src={dobra2Img}
