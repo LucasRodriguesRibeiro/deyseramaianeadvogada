@@ -2,10 +2,10 @@ import React from 'react';
 import { Search, Compass, ShieldCheck, UserCheck } from 'lucide-react';
 
 interface HowItWorksFoldProps {
-  onOpenEmergencyModal: () => void;
+  onOpenEmergencyModal?: () => void;
 }
 
-export const HowItWorksFold: React.FC<HowItWorksFoldProps> = ({ onOpenEmergencyModal }) => {
+export const HowItWorksFold: React.FC<HowItWorksFoldProps> = () => {
   const steps = [
     {
       num: "01",
@@ -82,16 +82,6 @@ export const HowItWorksFold: React.FC<HowItWorksFoldProps> = ({ onOpenEmergencyM
               </div>
             );
           })}
-        </div>
-
-        {/* Action Button */}
-        <div className="pt-2 flex justify-start">
-          <button
-            onClick={onOpenEmergencyModal}
-            className="silver-button px-8 py-3.5 rounded-md text-xs font-bold uppercase tracking-widest flex items-center space-x-2.5 cursor-pointer"
-          >
-            <span>AGENDAR ATENDIMENTO</span>
-          </button>
         </div>
 
       </div>
