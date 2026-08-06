@@ -1,6 +1,6 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
-import ramaImg from '../assets/images/rama.jpg';
+import dobra1Img from '../assets/images/dobra1.jpeg';
 
 interface HeroFoldProps {
   onOpenEmergencyModal: () => void;
@@ -13,11 +13,11 @@ export const HeroFold: React.FC<HeroFoldProps> = ({ onOpenEmergencyModal }) => {
       {/* Background Lawyer Photo - Sharp, clear, elegant overlay */}
       <div className="absolute top-0 right-0 bottom-0 w-full lg:w-[68%] pointer-events-none z-0 overflow-hidden">
         <img
-          src={ramaImg}
+          src={dobra1Img}
           alt="Deyse Ramaiane - Advocacia Criminal"
           className="w-full h-full object-cover object-[50%_18%] sm:object-[50%_18%] lg:object-[50%_16%] scale-[1.05] contrast-105 brightness-105 opacity-90 sm:opacity-95 lg:opacity-100 transition-all duration-300"
           onError={(e) => {
-            (e.target as HTMLImageElement).src = "/images/rama.jpg";
+            (e.target as HTMLImageElement).src = "/dobra1.jfif";
           }}
         />
         
