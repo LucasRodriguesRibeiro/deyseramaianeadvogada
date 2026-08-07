@@ -20,10 +20,10 @@ export const FourthFold: React.FC<FourthFoldProps> = ({ onOpenEmergencyModal }) 
   const steps = [
     { label: "FLAGRANTE", icon: Search },
     { label: "AUDIÊNCIA DE CUSTÓDIA", icon: UserCheck },
-    { label: "LIBERDADE E MEDIDAS URGENTES", icon: Unlock },
+    { label: "HABEAS CORPUS E LIBERDADE", icon: Unlock },
     { label: "BUSCA E APREENSÃO", icon: FileSearch },
     { label: "INQUÉRITO POLICIAL", icon: FileText },
-    { label: "PROCESSO CRIMINAL", icon: Scale },
+    { label: "DEFESA NO PROCESSO", icon: Scale },
     { label: "RECURSOS", icon: FileStack },
     { label: "EXECUÇÃO PENAL", icon: Landmark }
   ];
@@ -42,28 +42,26 @@ export const FourthFold: React.FC<FourthFoldProps> = ({ onOpenEmergencyModal }) 
 
           {/* Title */}
           <h2 className="font-serif-title text-3xl sm:text-4xl lg:text-[2.75rem] font-normal text-[#0B0B0C] tracking-tight">
-            ATUAÇÃO ESPECIALIZADA EM TRÁFICO DE DROGAS
+            DEFESA EM TRÁFICO DE DROGAS E LEI DE DROGAS
           </h2>
 
           {/* Text Paragraph */}
           <p className="text-[#18191B] text-base sm:text-lg leading-relaxed font-light">
-            Defesa técnica desde os primeiros atos da investigação até o processo e a execução penal, com análise criteriosa das provas, da legalidade dos procedimentos e das circunstâncias específicas de cada caso.
+            Atuação estratégica em casos envolvendo tráfico de drogas e associação para o tráfico, desde a prisão em flagrante e investigação até o processo, recursos e execução penal, com análise rigorosa das provas e da legalidade dos atos praticados.
           </p>
 
-          {/* Discrete Stages Bar with Icons */}
+          {/* Discrete Stages Bar with Icons (No bullet points) */}
           <div className="pt-4 pb-4 border-y border-[#B8BBC0]/50 flex flex-wrap items-center gap-2.5 sm:gap-3">
-            {steps.map((step, idx) => {
+            {steps.map((step) => {
               const IconComponent = step.icon;
               return (
-                <React.Fragment key={step.label}>
-                  <div className="bg-[#18191B] text-[#F7F7F5] px-4 py-2.5 rounded-lg flex items-center space-x-2.5 text-xs font-semibold tracking-wider shadow-sm hover:bg-[#000000] transition-colors">
-                    <IconComponent className="w-4 h-4 text-[#D1D5DB] shrink-0" />
-                    <span className="whitespace-nowrap">{step.label}</span>
-                  </div>
-                  {idx < steps.length - 1 && (
-                    <span className="text-[#74777C] text-sm font-bold">•</span>
-                  )}
-                </React.Fragment>
+                <div 
+                  key={step.label}
+                  className="bg-[#18191B] text-[#F7F7F5] px-4 py-2.5 rounded-lg flex items-center space-x-2.5 text-xs font-semibold tracking-wider shadow-sm hover:bg-[#000000] transition-colors"
+                >
+                  <IconComponent className="w-4 h-4 text-[#D1D5DB] shrink-0" />
+                  <span className="whitespace-nowrap">{step.label}</span>
+                </div>
               );
             })}
           </div>

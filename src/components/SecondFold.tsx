@@ -110,8 +110,8 @@ export const SecondFold: React.FC = () => {
               “Cada caso exige mais do que uma defesa. Exige estratégia.”
             </blockquote>
             
-            <div className="pt-2 flex flex-col items-start">
-              <span className="font-['Alex_Brush',cursive] text-5xl sm:text-6xl text-[#0B0B0C] leading-tight select-none tracking-wide font-normal">
+            <div className="pt-2 flex flex-col items-start relative">
+              <span className="font-['Kristi','Allison','WindSong',cursive] text-6xl sm:text-7xl lg:text-[5.5rem] text-[#0B0B0C] leading-none select-none font-normal tracking-wide transform -rotate-1">
                 Ramaiane
               </span>
             </div>
